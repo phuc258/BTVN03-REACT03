@@ -16,6 +16,20 @@ export function TodoProvider({ children }: { children: ReactNode }) {
     const [todos, setTodos] = useState<Todo[]>(initialData);
     const [searchItem, setSearchItem] = useState("");
 
+    // useState demo (core CRUD)
+    const addTodo = (name: string) => {
+        const trimmed = name.trim();
+        if (!trimmed) return;
+        setTodos(prev => [
+            { id: crypto.randomUUID(), name: trimmed, status: false },
+            ...prev,
+        ]);
+    }
+
+    const removeTodo = (id: string) => {
+        setTodos(prev => prev.filter(t => t.id !== id));
+    }
+
     const handleToggle = (id: string) => {
         setTodos(prev => prev.map(
             t => t.id === id ? { ...t, status: !t.status } : t
@@ -23,7 +37,7 @@ export function TodoProvider({ children }: { children: ReactNode }) {
     }
 
     return (
-        <TodoContext.Provider value={{ todos, searchItem, setSearchItem, handleToggle }}>
+        <TodoContext.Provider value={{ todos, searchItem, setSearchItem, handleToggle, addTodo, removeTodo }}>
             {children}
         </TodoContext.Provider>
     )

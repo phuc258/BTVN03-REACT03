@@ -5,4 +5,6 @@ export interface TodoContextType {
     searchItem: string;
     setSearchItem: (value: string) => void;
     handleToggle: (id: string) => void;
+    addTodo: (name: string) => void;
+    removeTodo: (id: string) => void;
 }
