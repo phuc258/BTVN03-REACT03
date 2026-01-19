@@ -2,10 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 
 import NotFoundPage from "../pages/NotFoundPage";
-import StudentCardPage from "../pages/StudentCardPage";
 import Layout from "../components/Layout";
 import EnumUnionTypePage from "../pages/Enum_Union_Type";
-import TypeAnnotationPage from "../pages/Type_Annotation";
+import TypeAnnotationPage from "../pages/Type_Annotation_Interface_Type";
 import GenericsPage from "../pages/Generics";
 import UseStatePage from "../pages/useState_Props";
 import UseEffectPage from "../pages/UseEffect";
@@ -21,7 +20,6 @@ const MainRoute: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="student-card" element={<StudentCardPage />} />
           <Route path="enum-union-types" element={<EnumUnionTypePage />} />
           <Route path="type-annotation" element={<TypeAnnotationPage />} />
           <Route path="generics" element={<GenericsPage />} />

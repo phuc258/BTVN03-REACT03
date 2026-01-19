@@ -5,25 +5,22 @@ const Layout: React.FC = () => {
   const location = useLocation();
 
   const menuItems = [
-    { path: "/student-card", label: "Student Card", icon: "🎓" },
-    { path: "/enum-union-types", label: "Enum + Union Types", icon: "📘" },
-    { path: "/type-annotation", label: "Type Annotation", icon: "✏️" },
-    { path: "/generics", label: "Generics", icon: "🔤" },
-    { path: "/usestate-props", label: "useState + Props", icon: "⚛️" },
-    { path: "/useeffect", label: "useEffect", icon: "🔄" },
-    { path: "/usecontext", label: "useContext", icon: "🌐" },
-    { path: "/usereducer", label: "useReducer", icon: "🔧" },
-    { path: "/useref", label: "useRef", icon: "🎯" },
+    { path: "/enum-union-types", label: "Enum + Union Types" },
+    { path: "/type-annotation", label: "Type Annotation" },
+    { path: "/generics", label: "Generics" },
+    { path: "/usestate-props", label: "useState + Props" },
+    { path: "/useeffect", label: "useEffect" },
+    { path: "/usecontext", label: "useContext" },
+    { path: "/usereducer", label: "useReducer" },
+    { path: "/useref", label: "useRef" },
     {
       path: "/usememo-usecallback",
       label: "useMemo + useCallback",
-      icon: "⚡",
     },
-    { path: "/uselayouteffect", label: "useLayoutEffect", icon: "📐" },
+    { path: "/uselayouteffect", label: "useLayoutEffect" },
     {
       path: "/usedebugvalue-useid",
       label: "useDebugValue + useId",
-      icon: "🐛",
     },
   ];
 
@@ -43,7 +40,6 @@ const Layout: React.FC = () => {
                       : "text-gray-700 hover:bg-gray-100"
                   }`}
                 >
-                  <span className="mr-3 text-xl">{item.icon}</span>
                   <span className="font-medium">{item.label}</span>
                 </Link>
               </li>
