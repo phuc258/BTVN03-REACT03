@@ -1,0 +1,199 @@
+.app-container {
+    text-align: left;
+  }
+  
+  .app-container h1 {
+    text-align: center;
+    color: #646cff;
+    margin-bottom: 2rem;
+    font-size: 2.5em;
+  }
+  
+  .demo-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(100, 108, 255, 0.2);
+  }
+  
+  .demo-section h2 {
+    color: #646cff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8em;
+  }
+  
+  .explanation {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .explanation p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .code-block {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 0.9em;
+    line-height: 1.5;
+    border: 1px solid rgba(100, 108, 255, 0.3);
+    color: #a8d8ff;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-field label {
+    font-weight: 500;
+    color: #e0e0e0;
+  }
+  
+  .input-field input {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(100, 108, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1em;
+    transition: border-color 0.25s;
+  }
+  
+  .input-field input:focus {
+    outline: none;
+    border-color: #646cff;
+    box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+  }
+  
+  .input-field small {
+    color: #888;
+    font-size: 0.85em;
+  }
+  
+  .validate-btn {
+    padding: 0.75rem 1.5rem;
+    background: #646cff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    align-self: flex-start;
+  }
+  
+  .validate-btn:hover {
+    background: #535bf2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 108, 255, 0.4);
+  }
+  
+  .result {
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+  
+  .result.success {
+    background: rgba(76, 175, 80, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.5);
+    color: #81c784;
+  }
+  
+  .result.error {
+    background: rgba(244, 67, 54, 0.2);
+    border: 1px solid rgba(244, 67, 54, 0.5);
+    color: #e57373;
+  }
+  
+  .examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .example-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(100, 108, 255, 0.2);
+  }
+  
+  .example-card h3 {
+    color: #646cff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .demo-example {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(100, 108, 255, 0.2);
+  }
+  
+  .demo-example h3 {
+    color: #646cff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3em;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .demo-section {
+      background: rgba(0, 0, 0, 0.02);
+      border-color: rgba(100, 108, 255, 0.3);
+    }
+  
+    .explanation {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  
+    .code-block {
+      background: #f5f5f5;
+      color: #333;
+      border-color: rgba(100, 108, 255, 0.3);
+    }
+  
+    .input-field input {
+      background: #fff;
+      color: #213547;
+      border-color: rgba(100, 108, 255, 0.3);
+    }
+  
+    .input-field label {
+      color: #213547;
+    }
+  
+    .result.success {
+      background: rgba(76, 175, 80, 0.1);
+      color: #2e7d32;
+    }
+  
+    .result.error {
+      background: rgba(244, 67, 54, 0.1);
+      color: #c62828;
+    }
+  
+    .example-card {
+      background: rgba(0, 0, 0, 0.02);
+    }
+  }
+  
