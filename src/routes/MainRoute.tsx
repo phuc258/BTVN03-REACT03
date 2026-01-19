@@ -14,7 +14,7 @@ import UseMemoPage from "../pages/UseMemo_UseCallback";
 import UseLayoutEffectPage from "../pages/UseLayoutEffectuseImperativeHandle";
 import UseDebugValuePage from "../pages/UseDebugValue";
 import UseIdPage from "../pages/UseIdPage";
-import { UseStatePropsDemo } from "../pages/useState_Props/UseStatePropsDemo";
+import { CounterParent } from "../pages/useState_Props/CounterParent";
 
 const MainRoute: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const MainRoute: React.FC = () => {
           <Route path="enum-union-types" element={<EnumUnionTypePage />} />
           <Route path="type-annotation" element={<TypeAnnotationPage />} />
           <Route path="generics" element={<GenericsPage />} />
-          <Route path="usestate-props" element={<UseStatePropsDemo />} />
+          <Route path="usestate-props" element={<CounterParent />} />
           <Route path="useeffect" element={<UseEffectPage />} />
           <Route path="usecontext" element={<UseContextPage />} />
           <Route path="usereducer" element={<UseReducerPage />} />
