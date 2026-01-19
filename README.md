@@ -1,73 +1,124 @@
-# React + TypeScript + Vite
+# BTVN03 - React TypeScript Learning Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dự án học tập về React và TypeScript, bao gồm các ví dụ và lý thuyết về TypeScript types, interfaces và React Hooks.
 
-Currently, two official plugins are available:
+## Tác giả
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Trần Đình Phúc
+- Hồ Đăng Quang
+- Hán Thành Dương
+- Nguyễn Ngọc Tín
+- Nguyễn Đức Anh Tài
+- Lê Nhật Quang
+- Trần Thị Huyền Trân
+- Phan Trọng Tiến
+- Võ Đăng Khoa
 
-## React Compiler
+## Mô tả
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Đây là bài tập về nhà số 3 (BTVN03), tập trung vào việc học và thực hành:
 
-## Expanding the ESLint configuration
+- TypeScript với React
+- Type Annotation, Interface và Type Alias
+- Enum và Union Types
+- Generics
+- Tất cả các React Hooks phổ biến
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Nội dung học tập
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### TypeScript Basics
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Type Annotation, Interface & Type** (`/type-annotation`)
+   - Type Annotation cho biến, hàm
+   - Interface và cách sử dụng
+   - Type Alias và sự khác biệt với Interface
+   - So sánh chi tiết Type vs Interface
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Enum & Union Types** (`/enum-union-types`)
+   - Enum types
+   - Union types
+   - Literal types
+
+3. **Generics** (`/generics`)
+   - Generic functions
+   - Generic interfaces
+   - Generic constraints
+
+### React Hooks
+
+1. **useState & Props** (`/usestate-props`)
+2. **useEffect** (`/useeffect`)
+3. **useContext** (`/usecontext`)
+4. **useReducer** (`/usereducer`)
+5. **useRef** (`/useref`)
+6. **useMemo & useCallback** (`/usememo-usecallback`)
+7. **useLayoutEffect** (`/uselayouteffect`)
+8. **useDebugValue & useId** (`/usedebugvalue-useid`)
+
+## Cấu trúc thư mục
+
+```
+src/
+├── components/
+│   └── Layout.tsx          # Layout chính với sidebar navigation
+├── pages/
+│   ├── Type_Annotation_Interface_Type.tsx
+│   ├── Enum_Union_Type.tsx
+│   ├── Generics.tsx
+│   ├── useState_Props.tsx
+│   ├── UseEffect.tsx
+│   ├── UseContext.tsx
+│   ├── UseReducer.tsx
+│   ├── UseRef.tsx
+│   ├── UseMemo_UseCallback.tsx
+│   ├── UseLayoutEffectuseImperativeHandle.tsx
+│   ├── UseDebugValue_useId.tsx
+│   ├── MenuPage.tsx
+│   └── NotFoundPage.tsx
+├── routes/
+│   └── MainRoute.tsx       # Cấu hình routing
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Cài đặt và chạy dự án
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Cài đặt dependencies
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### Chạy development server
+
+```bash
+npm run dev
+```
+
+Ứng dụng sẽ chạy tại [http://localhost:5173](http://localhost:5173)
+
+### Build cho production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Scripts
+
+- `npm run dev` - Chạy development server
+- `npm run build` - Build dự án cho production
+- `npm run lint` - Kiểm tra lỗi với ESLint
+- `npm run preview` - Preview production build
+
+## Ghi chú
+
+- Mỗi trang đều có phần demo và lý thuyết chi tiết
+- Sử dụng Tailwind CSS cho styling
+- Code được viết với TypeScript strict mode
+- Có sidebar navigation để dễ dàng di chuyển giữa các bài học
