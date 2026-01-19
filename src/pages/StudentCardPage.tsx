@@ -1,5 +1,3 @@
-import "../StudentCard.css";
-
 // interface với kiểu dữ liệu props
 interface StudentProps {
   name: string;
@@ -43,7 +41,7 @@ function App() {
   const studentAge: number = 20;
 
   return (
-    <div className="app">
+    <div className="p-8">
       <StudentCard
         name={studentName}
         age={studentAge}

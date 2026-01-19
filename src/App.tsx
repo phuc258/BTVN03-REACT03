@@ -1,13 +1,8 @@
-import "./App.css";
-import { TodoProvider } from "./context/TodoContext";
+import "./styles/App.css";
 import MainRoute from "./routes/MainRoute";
 
 function App() {
-  return (
-    <TodoProvider>
-      <MainRoute />
-    </TodoProvider>
-  );
+  return <MainRoute />;
 }
 
 export default App;

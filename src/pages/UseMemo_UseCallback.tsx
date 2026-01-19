@@ -2,7 +2,7 @@ import React, { useMemo, useState, useCallback } from 'react'
 import type { User } from '../interfaces/IUser';
 import SubmitButton from '../components/SubmitButton';
 
-const UseMemo_Callback = () => {
+const UseMemoPage = () => {
     const [users, setUsers] = useState<User[]>([]);
     const [name, setName] = useState("");
     const [age, setAge] = useState<number | "">("");
@@ -120,4 +120,4 @@ const UseMemo_Callback = () => {
 }
 
 
-export default UseMemo_Callback;
+export default UseMemoPage;
