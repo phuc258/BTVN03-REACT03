@@ -1,13 +1,11 @@
-export type Step = number;
-
 export type CounterState = {
   count: number;
-  step: Step;
+  step: number;
 };
 
 export type CounterChildProps = {
   count: number;
-  step: Step;
+  step: number;
   onIncrement: () => void;
   onDecrement: () => void;
   onReset: () => void;
