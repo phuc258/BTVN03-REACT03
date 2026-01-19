@@ -43,7 +43,7 @@ function App() {
   const studentAge: number = 20;
 
   return (
-    <div className="app">
+    <div className="p-8">
       <StudentCard
         name={studentName}
         age={studentAge}

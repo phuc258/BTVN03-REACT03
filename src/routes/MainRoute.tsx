@@ -1,23 +1,40 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 
 import NotFoundPage from "../pages/NotFoundPage";
-import TodoPage from "../pages/TodoPage";
-import LoginPage from "../pages/LoginPage";
-import PrivateRoute from "./PrivateRoute";
 import StudentCardPage from "../pages/StudentCardPage";
+import Layout from "../components/Layout";
+import EnumUnionTypePage from "../pages/Enum_Union_Type";
+import TypeAnnotationPage from "../pages/Type_Annotation";
+import GenericsPage from "../pages/Generics";
+import UseStatePage from "../pages/useState_Props";
+import UseEffectPage from "../pages/UseEffect";
+import UseContextPage from "../pages/UseContext";
+import UseReducerPage from "../pages/UseReducer";
+import UseRefPage from "../pages/UseRef";
+import UseMemoPage from "../pages/UseMemo_UseCallback";
+import UseLayoutEffectPage from "../pages/UseLayoutEffectuseImperativeHandle";
+import UseDebugValuePage from "../pages/UseDebugValue_useId";
 
 const MainRoute: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<PrivateRoute />}>
-          <Route path="/todo" element={<TodoPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="student-card" element={<StudentCardPage />} />
+          <Route path="enum-union-types" element={<EnumUnionTypePage />} />
+          <Route path="type-annotation" element={<TypeAnnotationPage />} />
+          <Route path="generics" element={<GenericsPage />} />
+          <Route path="usestate-props" element={<UseStatePage />} />
+          <Route path="useeffect" element={<UseEffectPage />} />
+          <Route path="usecontext" element={<UseContextPage />} />
+          <Route path="usereducer" element={<UseReducerPage />} />
+          <Route path="useref" element={<UseRefPage />} />
+          <Route path="usememo-usecallback" element={<UseMemoPage />} />
+          <Route path="uselayouteffect" element={<UseLayoutEffectPage />} />
+          <Route path="usedebugvalue-useid" element={<UseDebugValuePage />} />
         </Route>
 
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/student-card" element={<StudentCardPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
