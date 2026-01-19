@@ -13,12 +13,12 @@ const MainRoute: React.FC = () => {
             <Routes>
                 <Route element={<PrivateRoute />}>
                     <Route path="/todo" element={<TodoPage />} />
-                    
                 </Route>
-                <Route path="use-memo-callback" element={<UseMemo_Callback />} />
+                
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="*" element={<NotFoundPage />} />
+                <Route path="use-memo-callback" element={<UseMemo_Callback />} />
             </Routes>
         </BrowserRouter>
     );
