@@ -1,5 +1,3 @@
-import "../StudentCard.css";
-
 // interface với kiểu dữ liệu props
 interface StudentProps {
   name: string;
