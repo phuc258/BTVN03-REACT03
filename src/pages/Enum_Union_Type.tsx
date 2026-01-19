@@ -1,28 +1,23 @@
 import { useState } from 'react'
 import '../styles/UnionEnum.css'
 
-export const UserRole = {
-  ADMIN: 'admin',
-  USER: 'user',
-  GUEST: 'guest'
-} as const;
+enum UserRole  {
+  ADMIN = 'admin',
+  USER = 'user',
+  GUEST = 'guest',
+};
 
-export type UserRole = typeof UserRole[keyof typeof UserRole];
+enum Status  {
+  ACTIVE = 1,
+  INACTIVE = 2,
+  PENDING = 3,
+};
 
-export const Status = {
-  ACTIVE: 1,
-  INACTIVE: 2,
-  PENDING: 3
-} as const;
 
-export type Status = typeof Status[keyof typeof Status];
-
-// ========== UNION TYPE DEMO ==========
-// Union Type cho phép một biến có thể là một trong nhiều kiểu
-export type ID = string | number;
-export type StatusType = 'success' | 'error' | 'warning' | 'info';
-export type Age = number | null;
-export type UserStatus = 'online' | 'offline' | 'away';
+type ID = string | number;
+type StatusType = 'success' | 'error' | 'warning' | 'info';
+type Age = number | null;
+type UserStatus = 'online' | 'offline' | 'away';
 
 // Union Type với object
 export type User = {
