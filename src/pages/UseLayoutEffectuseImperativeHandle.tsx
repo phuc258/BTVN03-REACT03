@@ -1,5 +1,6 @@
 import React, {
   forwardRef,
+  useEffect,
   useImperativeHandle,
   useLayoutEffect,
   useRef,
@@ -55,9 +56,13 @@ function UseLayoutEffectuseImperativeHandle() {
   /** Example of useLayoutEffect */
   const [count, setCount] = useState(0)
 
-  useLayoutEffect(() => {
-    if (count > 3) setCount(0)
-  }, [count])
+  useEffect(() => {
+  if (count > 3) {
+    setCount(0)
+  }
+}, [count])
+
+
 
   const handleRun = () => {setCount( count + 1)}
 
@@ -96,4 +101,4 @@ function UseLayoutEffectuseImperativeHandle() {
   )
 }
 
-export default UseLayoutEffectuseImperativeHandle
+export default UseLayoutEffectuseImperativeHandle;
