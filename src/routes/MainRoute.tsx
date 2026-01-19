@@ -12,7 +12,8 @@ import UseReducerPage from "../pages/UseReducer";
 import UseRefPage from "../pages/UseRef";
 import UseMemoPage from "../pages/UseMemo_UseCallback";
 import UseLayoutEffectPage from "../pages/UseLayoutEffectuseImperativeHandle";
-import UseDebugValuePage from "../pages/UseDebugValue_useId";
+import UseDebugValuePage from "../pages/UseDebugValue";
+import UseIdPage from "../pages/UseIdPage";
 import { UseStatePropsDemo } from "../pages/useState_Props/UseStatePropsDemo";
 
 const MainRoute: React.FC = () => {
@@ -30,7 +31,8 @@ const MainRoute: React.FC = () => {
           <Route path="useref" element={<UseRefPage />} />
           <Route path="usememo-usecallback" element={<UseMemoPage />} />
           <Route path="uselayouteffect" element={<UseLayoutEffectPage />} />
-          <Route path="usedebugvalue-useid" element={<UseDebugValuePage />} />
+          <Route path="usedebugvalue" element={<UseDebugValuePage />} />
+          <Route path="useid" element={<UseIdPage />} />
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />

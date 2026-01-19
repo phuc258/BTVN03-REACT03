@@ -19,8 +19,12 @@ const Layout: React.FC = () => {
     },
     { path: "/uselayouteffect", label: "useLayoutEffect" },
     {
-      path: "/usedebugvalue-useid",
-      label: "useDebugValue + useId",
+      path: "/usedebugvalue",
+      label: "useDebugValue ",
+    },
+    {
+      path: "/useid",
+      label: "useId",
     },
   ];
 
