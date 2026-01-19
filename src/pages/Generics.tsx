@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 // 1. Generic Function - Hàm trả về phần tử đầu tiên của mảng
 function getFirstElement<T>(arr: T[]): T | undefined {

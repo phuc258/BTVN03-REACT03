@@ -4,16 +4,9 @@ function TypeAnnotationDemo() {
   const studentName: string = "Trần Đình Phúc";
   const age: number = 20;
   const isStudent: boolean = true;
-  const score: number | null = null;
 
   const subjects: string[] = ["Math", "Physics", "Chemistry"];
   const grades: Array<number> = [8, 9, 7];
-
-  const student: { name: string; age: number; gpa: number } = {
-    name: "Phúc",
-    age: 20,
-    gpa: 3.5,
-  };
 
   const calculateGPA = (scores: number[]): number => {
     return scores.reduce((a, b) => a + b, 0) / scores.length;
@@ -38,12 +31,6 @@ interface IStudent {
   major: string;
   status: "studying" | "graduated";
   email?: string;
-}
-
-// Interface có thể extends
-interface IGraduatedStudent extends IStudent {
-  graduationYear: number;
-  degree: string;
 }
 
 interface StudentCardProps {
@@ -80,7 +67,6 @@ function StudentCard({ student, onSelect }: StudentCardProps) {
 
 type Status = "studying" | "graduated" | "suspended";
 type ID = string | number;
-type Score = number;
 
 type TStudent = {
   id: ID;
@@ -91,8 +77,6 @@ type TStudent = {
   email?: string;
 };
 
-type CalculateGPA = (scores: number[]) => number;
-
 // Intersection type
 type ContactInfo = {
   email: string;
@@ -101,19 +85,7 @@ type ContactInfo = {
 
 type StudentWithContact = TStudent & ContactInfo;
 
-type Teacher = {
-  id: ID;
-  name: string;
-  subject: string;
-};
-
-type Person = TStudent | Teacher;
-
 function TypeDemo() {
-  const [selectedType, setSelectedType] = useState<"student" | "teacher">(
-    "student",
-  );
-
   const studentData: TStudent = {
     id: 1,
     name: "Nguyễn Văn A",
